@@ -10,7 +10,7 @@ const questionarieSchema = new Schema({
   question5: { type: String, required: true },
   question6: { type: String, required: true },
   question7: { type: String, required: true },
-  result: { type: Array, required: true },
+  result: [new Schema({ catName: { type: String } })],
 });
 
 const QuestionarieModel = model("Questionarie", questionarieSchema);
